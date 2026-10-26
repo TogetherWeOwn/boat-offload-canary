@@ -1,0 +1,18 @@
+[package]
+name = "boat-offload-canary"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Disposable public canary crate for boat heavy-command offload smoke tests. No dependencies, no product code."
+license = "MIT"
+publish = false
+
+# Smoke modes, off by default. Declared here (with no optional
+# dependencies) so `Cargo.lock` stays identical and `--locked` passes
+# for every mode. See README.md.
+[features]
+default = []
+slow-tests = []
+lockfile-write = []
+
+[dependencies]
